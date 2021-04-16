@@ -1,21 +1,24 @@
-package com.tuling.mall.order.service.impl;
+package com.zc.pay.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.zc.common.utils.PageUtils;
+import com.zc.pay.dao.OrderDao;
+import com.zc.pay.pojo.OrderEntity;
+import com.zc.pay.service.OrderService;
+import com.zc.common.utils.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.tuling.common.utils.PageUtils;
-import com.tuling.common.utils.Query;
 
-import com.tuling.mall.order.dao.OrderDao;
-import com.tuling.mall.order.entity.OrderEntity;
-import com.tuling.mall.order.service.OrderService;
-
-
+/**
+ *@author: zou
+ *@desc:
+ *@date:2021/4/15-16:49
+ *@CLassName:OrderServiceImpl
+  */
 @Service("orderService")
 public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> implements OrderService {
 

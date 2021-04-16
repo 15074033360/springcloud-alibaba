@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.zc.common.utils.utils;
+package com.zc.common.utils;
 
 /**
  * 常量

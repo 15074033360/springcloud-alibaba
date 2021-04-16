@@ -1,4 +1,4 @@
-package com.zc.common.utils.xss;
+package com.zc.common.xss;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

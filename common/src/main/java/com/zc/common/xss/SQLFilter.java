@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.zc.common.utils.xss;
+package com.zc.common.xss;
 
 
 import com.zc.common.exception.RRException;

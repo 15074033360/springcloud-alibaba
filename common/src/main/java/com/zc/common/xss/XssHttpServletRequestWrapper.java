@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.zc.common.utils.xss;
+package com.zc.common.xss;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;

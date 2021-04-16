@@ -2,6 +2,7 @@ package zc.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  *@author: zou
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *@CLassName:OrderApplication
   */
 @SpringBootApplication
+@EnableFeignClients
 //@EnableDiscoveryClient
 public class OrderApplication {
 

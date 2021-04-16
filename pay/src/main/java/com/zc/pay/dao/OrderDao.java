@@ -1,7 +1,7 @@
-package com.tuling.mall.order.dao;
+package com.zc.pay.dao;
 
-import com.tuling.mall.order.entity.OrderEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.zc.pay.pojo.OrderEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

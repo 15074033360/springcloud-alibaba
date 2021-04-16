@@ -1,8 +1,8 @@
-package com.tuling.mall.order.service;
+package com.zc.pay.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.tuling.common.utils.PageUtils;
-import com.tuling.mall.order.entity.OrderEntity;
+import com.zc.common.utils.PageUtils;
+import com.zc.pay.pojo.OrderEntity;
 
 import java.util.List;
 import java.util.Map;

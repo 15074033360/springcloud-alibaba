@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.tuling.common.exception;
+package com.zc.common.exception;
 
 /**
  * 自定义异常
