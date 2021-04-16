@@ -1,0 +1,56 @@
+server:
+  port: 8084
+
+spring:
+    application:
+      name: pay-zc  #微服务名称
+
+    #配置nacos注册中心地址
+    cloud:
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848
+          cluster-name: SH
+          ephemeral: false
+
+
+
+    #数据库配置
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://121.37.162.149:3306/mdt?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+        username: root
+        password: cemao123
+        initial-size: 10
+        max-active: 100
+        min-idle: 10
+        max-wait: 60000
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 20
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        stat-view-servlet:
+          enabled: true
+          url-pattern: /druid/*
+        filter:
+          stat:
+            log-slow-sql: true
+            slow-sql-millis: 1000
+            merge-sql: false
+          wall:
+            config:
+              multi-statement-allow: true
+
+  #mybatis-plus
+
+  #暴露actuator端点   http://localhost:8020/actuator/sentinel
+management:
+    endpoints:
+      web:
+        exposure:
+          include: '*'
