@@ -57,6 +57,13 @@ spring:
   #mybatis-plus
 
   #±©Â¶actuator¶Ëµã   http://localhost:8020/actuator/sentinel
+#  redis:
+#    host: localhost
+#    port: 6369
+#    database: 0
+#    jedis:
+#      pool:
+#        min-idle: 8
 management:
   endpoints:
     web:
