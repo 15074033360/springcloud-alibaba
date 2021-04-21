@@ -12,6 +12,7 @@
         <module>order</module>
         <module>pay</module>
          <module>stock</module>
+        <module>common</module>
     </modules>
     <groupId>com.zc</groupId>
     <artifactId>project</artifactId>
