@@ -1,6 +1,7 @@
 server:
   port: 8085
 
+
 spring:
   application:
     name: stock-zc  #微服务名称
@@ -57,13 +58,14 @@ spring:
   #mybatis-plus
 
   #暴露actuator端点   http://localhost:8020/actuator/sentinel
-#  redis:
-#    host: localhost
-#    port: 6369
-#    database: 0
-#    jedis:
-#      pool:
-#        min-idle: 8
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    jedis:
+      pool:
+        min-idle: 1
+        max-active: 64
 management:
   endpoints:
     web:

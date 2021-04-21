@@ -2,7 +2,7 @@ package com.zc.pay.controller;
 
 import com.zc.common.utils.PageUtils;
 import com.zc.common.utils.R;
-import com.zc.pay.pojo.OrderEntity;
+import com.zc.common.pojo.OrderEntity;
 import com.zc.pay.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

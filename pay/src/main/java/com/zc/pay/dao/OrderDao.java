@@ -1,7 +1,7 @@
 package com.zc.pay.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.zc.pay.pojo.OrderEntity;
+import com.zc.common.pojo.OrderEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

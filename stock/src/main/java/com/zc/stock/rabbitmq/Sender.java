@@ -1,6 +1,5 @@
 package com.zc.stock.rabbitmq;
 
-import com.zc.pay.pojo.OrderEntity;
 import com.zc.stock.config.RabbitMqConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.connection.CorrelationData;

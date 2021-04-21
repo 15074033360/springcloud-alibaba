@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zc.common.utils.PageUtils;
 import com.zc.pay.dao.OrderDao;
-import com.zc.pay.pojo.OrderEntity;
+import com.zc.common.pojo.OrderEntity;
 import com.zc.pay.service.OrderService;
 import com.zc.common.utils.Query;
 import org.springframework.stereotype.Service;

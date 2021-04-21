@@ -22,6 +22,6 @@ public class SecondConsumer {
     public void handleMessage(Message message) throws Exception {
         // 处理消息
         log.info("second msg :{}", JSON.toJSONString(new String(message.getBody())));
-        System.out.println("SecondConsumer {} handleMessage :"+message);
+       log.info("SecondConsumer {} handleMessage :",message);
     }
 }

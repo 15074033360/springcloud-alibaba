@@ -1,22 +1,21 @@
 package com.zc.stock.controller;
 
 import com.zc.stock.rabbitmq.Sender;
+import com.zc.stock.service.impl.StockServiceImpl;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import sun.rmi.runtime.Log;
 
-import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author: zou
@@ -30,8 +29,11 @@ public class SendController {
 
     @Autowired
     private Sender firstSender;
-   /* @Resource
-    private  RedissonClient redissonClient;*/
+    @Autowired
+    private RedissonClient redissonClient;
+
+    @Autowired
+    private StockServiceImpl stockService;
 
     @GetMapping("/send")
     public String send(String message){
@@ -53,13 +55,25 @@ public class SendController {
      * @return
      */
     @RequestMapping("stock")
-    public Map stockLow() {
+    public Map stockLow()throws Exception {
         Map maps = new HashMap(16);
         String lock="My_lock";
-//        RLock rLock= redissonClient.getLock(lock);
-//        rLock.lock();
-//        log.info("获取锁。。。。。");
-//        rLock.unlock();
+        RLock rLock= redissonClient.getLock(lock);
+        rLock.lock(10, TimeUnit.SECONDS);
+        rLock.tryLock(100,10,TimeUnit.SECONDS);
+        rLock.lock();
+        log.info("获取锁。。。。。");
+        rLock.unlock();
         return maps ;
+    }
+
+    @RequestMapping("getByProductId")
+    public int getByProductId(@RequestParam Integer id){
+        return stockService.getByProduct(id);
+    }
+
+    @RequestMapping("decrease")
+    public boolean decrease(@RequestParam Integer productId){
+        return stockService.decrease(productId);
     }
 }

@@ -2,7 +2,7 @@ package com.zc.pay.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zc.common.utils.PageUtils;
-import com.zc.pay.pojo.OrderEntity;
+import com.zc.common.pojo.OrderEntity;
 
 import java.util.List;
 import java.util.Map;
