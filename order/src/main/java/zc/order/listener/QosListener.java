@@ -28,7 +28,7 @@ public class QosListener implements ChannelAwareMessageListener {
         //处理业务逻辑
 
         //进行消息的签收
-        //channel.basicAck(message.getMessageProperties().getDeliveryTag(),true);
+        channel.basicAck(message.getMessageProperties().getDeliveryTag(),true);
 
     }
 }

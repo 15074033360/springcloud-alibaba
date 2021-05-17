@@ -1,7 +1,8 @@
 package com.zc.stock.rabbitmq;
 
 import com.zc.stock.config.RabbitMqConfig;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,9 @@ import java.util.Map;
  * @desc:
  * @date:2021-04-19 10:11
  */
-@Slf4j
 @Component
 public class Sender {
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
